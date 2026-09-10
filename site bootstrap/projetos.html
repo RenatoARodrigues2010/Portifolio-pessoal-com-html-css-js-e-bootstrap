@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos — DevPortfólio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-principal sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-code-slash"></i> DevPortfólio
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuNavegacao" aria-controls="menuNavegacao"
+                aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuNavegacao">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="projetos.html">
+                        <i class="bi bi-folder2-open"></i> Projetos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bootstrap.html"><i class="bi bi-bootstrap"></i> Sobre o Bootstrap</a>
+                </li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-destaque" href="index.html#contato"><i class="bi bi-envelope"></i> Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══════════ TÍTULO DA PÁGINA ═══════════ -->
+<section class="bg-principal text-white text-center py-5">
+    <div class="container">
+        <h1 class="fw-bold"><i class="bi bi-folder2-open"></i> Meus Projetos</h1>
+        <p class="lead mb-0">Trabalhos desenvolvidos durante meus estudos de desenvolvimento web</p>
+    </div>
+</section>
+
+<!-- ═══════════ CARROSSEL — PROJETOS EM DESTAQUE ═══════════ -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="texto-principal titulo-secao mb-4">⭐ Projetos em Destaque</h2>
+        <div id="carouselDestaques" class="carousel slide rounded-4 overflow-hidden shadow" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="https://picsum.photos/seed/cafearora/1200/500" class="d-block w-100" alt="Landing Page Café Aurora">
+                    <div class="carousel-caption d-none d-md-block pb-4">
+                        <h5 class="fw-bold">Café Aurora — Landing Page</h5>
+                        <p>Página de apresentação de uma cafeteria artesanal, feita com Bootstrap.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://picsum.photos/seed/taskflow/1200/500" class="d-block w-100" alt="App TaskFlow">
+                    <div class="carousel-caption d-none d-md-block pb-4">
+                        <h5 class="fw-bold">TaskFlow — Lista de Tarefas</h5>
+                        <p>Aplicação para organizar tarefas do dia a dia com JavaScript.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://picsum.photos/seed/techstore/1200/500" class="d-block w-100" alt="Loja TechStore">
+                    <div class="carousel-caption d-none d-md-block pb-4">
+                        <h5 class="fw-bold">TechStore — Loja Virtual</h5>
+                        <p>Mockup de e-commerce de eletrônicos com layout responsivo.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ TODOS OS PROJETOS (GRID + CARDS) ═══════════ -->
+<section class="pb-5">
+    <div class="container">
+        <h2 class="texto-principal titulo-secao mb-4">📁 Todos os Projetos</h2>
+
+        <!-- Responsividade: 1 coluna no celular, 2 no tablet, 3 no desktop -->
+        <div class="row g-4">
+
+            <!-- Projeto 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/projcafe/600/350" class="card-img-top" alt="Landing Page Café Aurora">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Landing Page</span>
+                        <h5 class="card-title fw-bold">Café Aurora</h5>
+                        <p class="card-text small">
+                            Página de apresentação de uma cafeteria artesanal, com layout moderno,
+                            menu de navegação e 100% responsiva.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProj1">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-box-arrow-up-right"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/projtask/600/350" class="card-img-top" alt="App TaskFlow">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">JavaScript</span>
+                        <h5 class="card-title fw-bold">TaskFlow</h5>
+                        <p class="card-text small">
+                            Aplicação de lista de tarefas com adição, conclusão e remoção de itens.
+                            Dados salvos no navegador.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProj2">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-box-arrow-up-right"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/projblog/600/350" class="card-img-top" alt="Blog Code & Café">
+                    <div class="card-body">
+                        <span class="badge bg-purple badge-bootstrap mb-2">Bootstrap</span>
+                        <h5 class="card-title fw-bold">Code &amp; Café — Blog</h5>
+                        <p class="card-text small">
+                            Blog sobre tecnologia e café com lista de posts, barra lateral
+                            e paginação estilizada.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProj3">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-box-arrow-up-right"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/projreceita/600/350" class="card-img-top" alt="Site Sabor & Arte">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">HTML/CSS</span>
+                        <h5 class="card-title fw-bold">Sabor &amp; Arte</h5>
+                        <p class="card-text small">
+                            Site de receitas com galeria de pratos, seção de ingredientes
+                            e modo de preparo passo a passo.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProj4">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-box-arrow-up-right"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/projloja/600/350" class="card-img-top" alt="Loja Virtual TechStore">
+                    <div class="card-body">
+                        <span class="badge bg-purple badge-bootstrap mb-2">Bootstrap</span>
+                        <h5 class="card-title fw-bold">TechStore</h5>
+                        <p class="card-text small">
+                            Mockup de loja virtual de eletrônicos com vitrine de produtos,
+                            carrinho visual e filtros por categoria.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProj5">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-box-arrow-up-right"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="https://picsum.photos/seed/projcalc/600/350" class="card-img-top" alt="Calculadora CalcPro">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">JavaScript</span>
+                        <h5 class="card-title fw-bold">CalcPro</h5>
+                        <p class="card-text small">
+                            Calculadora web com operações básicas, teclado funcional
+                            e histórico de cálculos.
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-3">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalProj6">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-box-arrow-up-right"></i> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ CTA FINAL (Componente: ALERT) ═══════════ -->
+<section class="pb-5">
+    <div class="container">
+        <div class="alert alert-warning d-flex flex-wrap align-items-center justify-content-between gap-3 mb-0" role="alert">
+            <div>
+                <i class="bi bi-chat-heart"></i>
+                <strong>Gostou do meu trabalho?</strong> Vamos conversar sobre o seu próximo projeto!
+            </div>
+            <a href="index.html#contato" class="btn btn-dark">Fale comigo <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ MODAIS DE DETALHES (Componente: MODAL) ═══════════ -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modalProj1" tabindex="-1" aria-labelledby="modalProj1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProj1Label">☕ Café Aurora — Landing Page</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/seed/projcafe/800/400" class="img-fluid rounded mb-3" alt="Café Aurora">
+                <p>
+                    Landing page criada para uma cafeteria artesanal fictícia. O projeto utiliza
+                    navbar fixa, seção hero com chamada principal, cards de produtos e formulário
+                    de contato — tudo com o grid responsivo do Bootstrap.
+                </p>
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-primary">CSS3</span>
+                <span class="badge bg-purple badge-bootstrap">Bootstrap 5</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="#" class="btn btn-primary">Ver online <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modalProj2" tabindex="-1" aria-labelledby="modalProj2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProj2Label">✅ TaskFlow — Lista de Tarefas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/seed/projtask/800/400" class="img-fluid rounded mb-3" alt="TaskFlow">
+                <p>
+                    Aplicação para organizar tarefas diárias. Permite adicionar, marcar como
+                    concluída e remover tarefas, com os dados persistidos no localStorage
+                    do navegador.
+                </p>
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-warning text-dark">CSS3</span>
+                <span class="badge bg-success">JavaScript</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="#" class="btn btn-primary">Ver online <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modalProj3" tabindex="-1" aria-labelledby="modalProj3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProj3Label">📝 Code &amp; Café — Blog</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/seed/projblog/800/400" class="img-fluid rounded mb-3" alt="Blog Code & Café">
+                <p>
+                    Blog com posts sobre tecnologia. Utiliza cards para os artigos, sidebar com
+                    categorias e paginação — todos componentes nativos do Bootstrap.
+                </p>
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-purple badge-bootstrap">Bootstrap 5</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="#" class="btn btn-primary">Ver online <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="modalProj4" tabindex="-1" aria-labelledby="modalProj4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProj4Label">🍰 Sabor &amp; Arte — Site de Receitas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/seed/projreceita/800/400" class="img-fluid rounded mb-3" alt="Sabor & Arte">
+                <p>
+                    Site de receitas com galeria de pratos em grid, página de detalhe com
+                    ingredientes e modo de preparo em formato de lista ordenada.
+                </p>
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-warning text-dark">CSS3</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="#" class="btn btn-primary">Ver online <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="modalProj5" tabindex="-1" aria-labelledby="modalProj5Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProj5Label">🛒 TechStore — Loja Virtual</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/seed/projloja/800/400" class="img-fluid rounded mb-3" alt="TechStore">
+                <p>
+                    Mockup de e-commerce com vitrine de produtos em cards, badges de promoção,
+                    modal de detalhes do produto e layout totalmente responsivo.
+                </p>
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-purple badge-bootstrap">Bootstrap 5</span>
+                <span class="badge bg-success">JavaScript</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="#" class="btn btn-primary">Ver online <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="modalProj6" tabindex="-1" aria-labelledby="modalProj6Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProj6Label">🔢 CalcPro — Calculadora Web</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/seed/projcalc/800/400" class="img-fluid rounded mb-3" alt="CalcPro">
+                <p>
+                    Calculadora com as quatro operações básicas, suporte a teclado físico
+                    e histórico das últimas contas realizadas.
+                </p>
+                <span class="badge bg-primary">HTML5</span>
+                <span class="badge bg-success">JavaScript</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="#" class="btn btn-primary">Ver online <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="text-white py-4">
+    <div class="container">
+        <div class="row gy-3 text-center text-md-start">
+            <div class="col-12 col-md-4">
+                <h5 class="fw-bold"><i class="bi bi-code-slash"></i> DevPortfólio</h5>
+                <p class="small mb-0">Projeto educacional desenvolvido com Bootstrap 5 para estudo de front-end.</p>
+            </div>
+            <div class="col-12 col-md-4 text-md-center">
+                <p class="mb-1"><strong>Aluno:</strong> Seu Nome</p>
+                <p class="mb-0"><strong>Ano:</strong> 2025</p>
+            </div>
+            <div class="col-12 col-md-4 text-md-end">
+                <a href="#" class="text-white fs-5 me-3" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-white fs-5 me-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <p class="text-center small mb-0">
+            © 2025 DevPortfólio — Feito com <i class="bi bi-heart-fill text-danger"></i> e
+            <a href="bootstrap.html" class="text-warning text-decoration-none">Bootstrap 5</a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

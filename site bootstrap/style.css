@@ -1,0 +1,135 @@
+/* ══════════════════════════════════════════════
+   DEVPORTFÓLIO — Identidade Visual do Projeto
+   Cor principal:   #4f46e5 (índigo)
+   Cor secundária:  #1e1b4b (azul escuro)
+   Cor de destaque: #f59e0b (âmbar)
+   Cor de fundo:    #f8fafc (cinza claro)
+   Tipografia:      Poppins (títulos) / Inter (texto)
+   ══════════════════════════════════════════════ */
+
+:root {
+    --cor-principal: #4f46e5;
+    --cor-secundaria: #1e1b4b;
+    --cor-destaque: #f59e0b;
+    --cor-fundo: #f8fafc;
+    --cor-texto: #334155;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* ── Classes de cor personalizadas ── */
+.bg-principal {
+    background-color: var(--cor-principal);
+}
+
+.texto-principal {
+    color: var(--cor-principal);
+}
+
+.bg-destaque {
+    background-color: var(--cor-destaque);
+}
+
+/* ── Botão de destaque personalizado ── */
+.btn-destaque {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.btn-destaque:hover {
+    background-color: #d97706;
+    border-color: #d97706;
+    color: #ffffff;
+}
+
+/* ── Hero (página inicial) ── */
+.hero {
+    background: linear-gradient(135deg, var(--cor-secundaria) 0%, var(--cor-principal) 100%);
+    color: #ffffff;
+    padding: 5rem 0;
+}
+
+.hero-foto {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    max-width: 280px;
+}
+
+/* ── Títulos de seção com traço de destaque ── */
+.titulo-secao::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--cor-destaque);
+    border-radius: 2px;
+    margin-top: 0.5rem;
+}
+
+.titulo-secao.text-center::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Cards com efeito hover ── */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.2);
+}
+
+/* ── Círculo de ícones (cards de serviço) ── */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.6rem;
+}
+
+/* ── Badge extra para projetos com Bootstrap ── */
+.badge-bootstrap {
+    background-color: #7c3aed;
+    color: #ffffff;
+}
+
+/* ── Caixas de demonstração do grid (bootstrap.html) ── */
+.demo-box {
+    background-color: rgba(79, 70, 229, 0.12);
+    border: 1px dashed var(--cor-principal);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+
+/* ── Barras de progresso ── */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* ── Rodapé ── */
+footer {
+    background-color: var(--cor-secundaria);
+}
